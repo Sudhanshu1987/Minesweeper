@@ -75,6 +75,15 @@
     line-height: 38px;
 }
 
+.safe {
+    background-color: #eee;
+    color: #777;
+}
+
+.bomb {
+    color: #333;
+}
+
 .space .fa { line-height: 40px; }
 .space .fa-bomb { font-size: 24px; }
 .space .fa-smile-o { font-size: 26px; }

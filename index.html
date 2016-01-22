@@ -26,15 +26,31 @@
     <div id="board"></div>
     <div id="new-game" class="controls">Play again?</div>
     <script type="text/javascript">
+        var board;
         $(document).ready(function () {
-                newGame('reg');
+            newGame('reg');
+            $('#new-game').hide();
+
+            $('#difficulty li.selected').click(function (eventObject) {
+                $('#difficulty li').removeClass('selected');
+                $(this).addClass('selected');
+
+                var difficulty = $(this).attr('id');
+                newGame(difficulty);
+                $('#new-game').hide();
+            });
+
+            $('#new-game').click(function (eventObject) {
+                var difficulty = $('#difficulty li.selected').attr('id');
+                newGame(difficulty);
+                $('#new-game').hide();
+            });
         });
         /*
             This is equivalent to-
             $(function() {
             });
         */
-
     </script>
 </body>
 </html>
