@@ -120,6 +120,7 @@ function Board(row, col){
         var min = 1;
         var max = this.row * this.col;
         this.bombCount = Math.round((Math.random() * ((max / 2) - min) + (min)));
+        $('#value').html(this.bombCount);
         for (i = 0; i < this.bombCount; i++) {
             var bombIndex = Math.round(Math.random() * (max - 1));
             var x = Math.floor(bombIndex / this.col);

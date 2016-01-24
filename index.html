@@ -31,10 +31,9 @@
             newGame('reg');
             $('#new-game').hide();
 
-            $('#difficulty li.selected').click(function (eventObject) {
+            $('#difficulty li').click(function (eventObject) {
                 $('#difficulty li').removeClass('selected');
                 $(this).addClass('selected');
-
                 var difficulty = $(this).attr('id');
                 newGame(difficulty);
                 $('#new-game').hide();

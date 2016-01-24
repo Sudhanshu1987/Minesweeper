@@ -50,6 +50,7 @@
 }
 
 #difficulty li:hover { background-color: #333; }
+#difficulty li.selected { background-color: #777; }
 
 #board {
     min-width: 440px;
